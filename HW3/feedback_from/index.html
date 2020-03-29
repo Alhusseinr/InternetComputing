@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Discount Calculator</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <main>
+        <h1>Product Discount Calculator</h1>
+        <form action="backend.php" method="post">
+
+            <div id="data">
+                <label>Name: </label>
+                <input type="hidden" name="test_text" id="text_content" value="" />
+                <select name="suffex" id="suffex" onchange="document.getElementById('text_content').value=this.options[this.selectedIndex].text" required="required"
+                    >
+                    <option value="Dr.">Dr.</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                </select>
+                <input type="text" name="name" required="required">
+                <br>
+
+                <label>Email Address: </label>
+                <input type="text" name="email" required="required">
+                <br>
+
+                <label>Phone Number: </label>
+                <input type="text" name="phone_number" required="required">
+                <br>
+                
+                <label for="rating">Rating...</label>
+                <input type="hidden" name="ratingHidden" id="ratingHidden" value="" />
+                <select name="rating" onchange="document.getElementById('ratingHidden').value=this.options[this.selectedIndex].text" required="required">
+                    <option value="excellent">excellent</option>
+                    <option value="okay">okay</option>
+                    <option value="boaring">boaring</option>
+                </select>
+                <br/>
+                
+                <label for="comments">Comments: </label>
+                <textarea name="comments" required="required"></textarea>
+            </div>
+            
+            <div id="buttons">
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit"><br>
+            </div>
+            
+        </form>
+    </main>
+</body>
+</html>
+
