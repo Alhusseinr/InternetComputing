@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <meta charset = "utf-8">
+        <style type = "text/css"></style>
+        <script>
+          var color =["#FFFF00", "#651FFF", "#18FFFF", "#80DEEA", "#4CAF50", "#6A1B9A", "#000000"];
+          var counter = 1;
+          while ( counter <= 7){
+            document.writeln( "<p style = 'font-size: " + counter + "ex; color:"+color[counter-1]+"'>HTML5 font size " + counter + "ex</p>" );
+            ++counter;
+          }
+          counter = counter - 2;
+          while ( counter >= 1){
+            document.writeln( "<p style = 'font-size: " + counter + "ex; color:"+color[counter-1]+"'>HTML5 font size " + counter + "ex</p>" );
+            --counter; // decrement
+          }
+        </script>
+      </head>
+    <body>
+    </body>
+</html>

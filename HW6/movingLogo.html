@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <style>
+
+    div.bound{
+
+      display: block;
+      border-style: solid;
+      width: 502px;
+      height: 402px;
+      border-width: 1px;
+    }
+
+    div.move{
+      position: absolute;
+    }
+    </style>
+
+    <script>
+
+      var x=5;
+      var y=5;
+      var max_x = 400;
+      var max_y=300;
+      var xoffset=10;
+      var yoffset=10;
+
+      function go()
+      {
+        moveCSLogo();
+        var choice = prompt("1:Faster 2:Normal 3:Slower"); //asks the user to choose
+        if(choice==1){
+          xoffset=xoffset*2; //for faster
+          yoffset=yoffset*2;
+        }
+        else if(choice==3){
+          xoffset=xoffset/2; //for slower
+          yoffset=yoffset/2;
+        }
+
+      }
+
+
+
+      function moveCSLogo()
+      {
+        x=x+xoffset;
+        y=y+yoffset;
+
+        document.getElementById("msucs").style.top=y+'px';
+        document.getElementById("msucs").style.left=x+'px';
+
+        if((x+xoffset>max_x) || (x+xoffset<0))
+          xoffset *=-1;
+        if((y+yoffset>max_y) || (y+yoffset<0))
+          yoffset *=-1;
+
+        window.setTimeout('moveCSLogo()',100);
+
+      }
+
+    </script>
+  </head>
+
+    <body onload="go()">
+      <div class="bound">
+        <div id="msucs" class="move"></div>
+        <img src="cs_logo2.png" alt="need image here" />
+      </div>
+      <p>(a) The image continues to move because The getElementById() method in the HTML DOM, is used every time if we want to manipulate an element on your document where the element is image element defined by msucs id</p>
+
+      <p>(b) yes we can change the speed of logo by change xoffset and yoffset value</p>
+
+      <p>(c) by decreasing xoffset and yoffset value</p>
+
+      <p>(d) yes the image can be replaced by any other image provided image size doesn't exceed bound size--></p>
+  </body>
+
+</html>

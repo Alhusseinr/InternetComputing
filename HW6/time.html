@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Time</title>
+    <script>
+        function roundOff(i){
+          if(i < 10){
+            i = "0" + i;
+          }
+          return i;
+        }
+        function render(){
+          var span = document.getElementById("printTime");
+            setInterval(function(){
+              var date = new Date();
+              var h = roundOff(date.getHours());
+              var m = roundOff(date.getMinutes());
+              var s = roundOff(date.getSeconds());
+              var ms = Math.round(date.getMilliseconds()/100);
+              span.innerText = h + ":" + m + ":" + s + ":" + ms;
+            }, 100);
+        }
+    </script>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <button onclick="render()">What time is it?</button>
+      <div style="font-size: 50px" id="printTime"></div>
+    </div>
+  </body>
+</html>

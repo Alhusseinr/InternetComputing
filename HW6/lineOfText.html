@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <title>Web Page Design</title>
+    <head>
+      <script>
+        function randomize() {
+          document.getElementById('p1').style.color = randomColors();
+        }
+
+        function randomColors() {
+          return '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+      </script>
+    </head>
+  <body>
+    <div>
+      <p id="p1" onclick="randomize()">Welcome To CSIT: Click me to change color.</p>
+    </div>
+  </body>
+</html>

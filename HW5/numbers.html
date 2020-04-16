@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script type="text/javascript">
+function myFunction() {
+
+var first =prompt("Please enter first number",10);
+
+var a=parseInt(first);
+if(b>20 || b<5)
+{
+alert("Please enter a valid number");
+first =prompt("Please enter first number",10);
+a=parseInt(first);
+}
+var res="";
+for(var i=0;i<a;i++)
+{
+res=res+"*";
+}
+
+document.getElementById("output1").innerHTML =res;
+var second =prompt("Please enter second number",15);
+var b=parseInt(second);
+if(b>20 || b<5)
+{
+alert("Please enter a valid number");
+second =prompt("Please enter second number",15);
+b=parseInt(second);
+}
+var res1="";
+for(var i=0;i<b;i++)
+{
+res1=res1+"*";
+}
+
+document.getElementById("output2").innerHTML =res1;
+
+var third =prompt("Please enter third number",15);
+var c=parseInt(third);
+var res2="";
+   if(c>20 || c<5)
+{
+alert("Please enter a valid number");
+third =prompt("Please enter third number",10);
+c=parseInt(third);
+}
+else
+{
+for(var i=0;i<c;i++)
+{
+res2=res2+"*";
+}
+}
+
+document.getElementById("output3").innerHTML =res2;
+}
+
+</script>
+
+</head>
+
+<body onLoad="myFunction()">
+<div style="color:red" id="output1"></div>
+<div style="color:yellow" id="output2"></div>
+<div style="color:blue" id="output3"></div>
+</body>
+</html>

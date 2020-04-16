@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+function calSquare(){
+var firstNUM;
+var secondNUM;
+do{
+
+firstNUM = prompt("PLEASE ENTET A NUMBER BETWEEN 1 AND 20");
+
+}while(firstNUM >20 || firstNUM <1);
+
+do{
+secondNUM = prompt("PLEASE ENTET A NUMBER BETWEEN 1 AND 20");
+
+}while(secondNUM >20 || secondNUM <1);
+
+firstNUM = parseInt(firstNUM);
+secondNUM = parseInt(secondNUM);
+
+if (firstNUM > secondNUM){
+//alert(88888);
+var temp = secondNUM;
+secondNUM = firstNUM;
+firstNUM = temp;
+}
+alert( firstNUM );
+alert(secondNUM);
+var table = document.getElementById("myTable");
+
+var row=0;
+
+for(var i=secondNUM;i>=firstNUM;i--){
+
+
+var row = table.insertRow(1);
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+cell1.innerHTML = i;
+cell2.innerHTML = i*i;
+cell3.innerHTML = i*i*i;
+row = row + 1;
+}
+}
+</script>
+
+</head>
+<body onload = "calSquare()" >
+
+<table id="myTable" border=1>
+<tr>
+<td>NUMBER</td>
+<td>SQUARE</td>
+
+<td>CUBE </td>
+</tr>
+</table>
+
+</body>
+</html>
