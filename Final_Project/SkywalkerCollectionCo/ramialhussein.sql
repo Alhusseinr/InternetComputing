@@ -234,4 +234,4 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 --create user to query product database --
-GRANT SELECT, INSERT, DELETE, UPDATE ON ramialhusseindatabase.*TO ramialhussein@localhostIDENTIFIED BY 'ramialhusseinpass';
+GRANT SELECT, INSERT, DELETE, UPDATE ON ramialhusseindatabase.* TO ramialhussein@localhost IDENTIFIED BY 'ramialhusseinpass';
